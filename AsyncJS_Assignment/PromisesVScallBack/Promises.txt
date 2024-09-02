@@ -1,0 +1,26 @@
+Q4.Compare Promises to callbacks and discuss why Promises are preferred for managing asynchronous code
+
+Key Differences Between Promises and Callbacks
+
+Structure and Readability:
+* Callbacks can result in deeply nested and hard-to-read code when dealing with multiple asynchronous operations (known as "callback hell").
+* Promises allow for a flat structure by chaining with .then(), making the code easier to read and maintain.
+
+Error Handling:
+
+* Callbacks require explicit error handling at each level, which can become cumbersome and inconsistent.
+* Promises provide a streamlined error handling mechanism with .catch(), which catches errors in the entire chain.
+
+Control Over Execution:
+
+* Callbacks immediately pass control to the callback function, which can sometimes lead to unexpected behavior and difficulties in controlling the flow of the program.
+* Promises give more control over when the execution continues by using .then(), allowing for more predictable and manageable asynchronous flows.
+
+Why Promises Are Preferred:
+
+=> Better Error Management: 
+      Promises handle errors more gracefully and consistently.
+=> Chaining: 
+      Promises support chaining operations, which avoids deeply nested callbacks.
+=> Compatibility with Modern JavaScript: 
+        Promises work well with async/await syntax, making code look more like synchronous code.

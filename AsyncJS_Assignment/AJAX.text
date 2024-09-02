@@ -1,0 +1,28 @@
+Definition:
+==========
+
+XMLHttpRequest is a built-in JavaScript object used to send HTTP requests to a server and receive responses from the server asynchronously. It is a core component of AJAX (Asynchronous JavaScript and XML), enabling web pages to update content dynamically without needing a full page reload.
+
+How XMLHttpRequest is Used in AJAX:
+===================================
+
+Creating an Object: 
+     An instance of XMLHttpRequest is created using the new XMLHttpRequest() constructor.
+
+Opening a Request: 
+         The open() method is used to configure the request, specifying the HTTP method (such as GET or POST), the URL, and whether the request is asynchronous.
+
+Sending the Request: 
+        The send() method sends the request to the server. Data can be sent along with the request, particularly in POST requests.
+
+Handling the Response: 
+       The onreadystatechange event handler or the load event handler is used to define what happens when the server responds. The server response can be accessed through properties like responseText (for text data) or responseXML (for XML data).
+
+Key Properties and Methods:
+=========================
+
+ open(method, url, async): Initializes the request.
+send(data): Sends the request to the server.
+onreadystatechange: Event handler for changes in the readyState.
+responseText: Contains the server's response as a string.
+status: HTTP status code returned by the server.

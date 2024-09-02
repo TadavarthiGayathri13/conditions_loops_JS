@@ -1,0 +1,47 @@
+Q3. What is the same-origin policy in the context of AJAX requests, and how can you work around it?     
+
+
+The same-origin policy allows a web page to make requests only to the same origin (domain, protocol, and port) 
+from which it was loaded. For example, if your web page is loaded from https://example.com, it can only make AJAX 
+requests to https://example.com, not to https://anotherdomain.com or http://example.com:8080.
+
+An origin is defined by three parts:
+
+Protocol (e.g., http, https)
+Domain (e.g., example.com)
+Port (e.g., :80, :443)
+If any of these differ between the requesting page and the target server,
+ the request will be considered a cross-origin request and will be blocked by the browser due to the same-origin policy.
+
+How to Work Around the Same-Origin Policy
+======================================
+
+=> CORS (Cross-Origin Resource Sharing):
+
+* The most common and standard way to handle cross-origin requests is by using CORS.
+ It is a mechanism that allows servers to specify who can access their resources by sending specific HTTP headers.
+
+* The server hosting the resource must include the appropriate CORS headers to allow the browser to make cross-origin requests. The key headers are:
+Access-Control-Allow-Origin:
+    Specifies which origins are permitted.
+Access-Control-Allow-Methods:
+    Specifies which HTTP methods (GET, POST, etc.) are allowed.
+Access-Control-Allow-Headers:
+    Specifies which HTTP headers can be used during the request.
+
+=> JSONP (JSON with Padding):
+
+* JSONP is an older workaround for the same-origin policy, allowing cross-origin requests by exploiting the <script> tag, 
+  which is not subject to the same-origin policy.
+* The server returns a script containing the requested data in the form of a function call (with a callback parameter),
+   which is then executed by the browser.
+* However, JSONP is limited to GET requests and poses security risks, so it's considered obsolete and less secure than CORS.
+
+=> Using a Proxy Server:
+* You can set up a proxy server on the same origin as your web page to forward requests to the target server.
+* The proxy server will make the cross-origin request on behalf of your web page and then send the response back to your page, 
+  effectively circumventing the same-origin policy.
+
+=> Browser Extensions:
+* For development purposes, you can use browser extensions to disable or bypass the same-origin policy.
+   However, this should never be used in production due to security concerns.

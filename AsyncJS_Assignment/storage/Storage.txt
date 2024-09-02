@@ -1,0 +1,29 @@
+Q6.Describe the purpose and usage of the localStorage and sessionStorage APIs in web development. Give
+suitable examples for each.
+
+
+The localStorage and sessionStorage APIs are part of the Web Storage API, 
+which provide mechanisms for storing data on the client side (within the browser) 
+in a key-value format. They allow web applications to store data that persists beyond
+ a single page reload or session, offering a more robust solution than cookies for client-side storage.
+
+ 1. localStorage API: 
+
+Purpose:
+   localStorage is used to store data persistently in the browser. The data saved in localStorage does not expire; 
+   it remains available even after the browser is closed or the computer is restarted. This makes it ideal for storing data that should be retained across multiple sessions,
+    such as user preferences or settings.
+Usage:
+  Data is stored as key-value pairs, where both the key and value are strings. localStorage can store
+   up to approximately 5–10 MB of data (depending on the browser).
+
+
+2. sessionStorage API:
+
+Purpose:
+    sessionStorage is used to store data for a single browsing session.
+     The data is cleared when the browser tab or window is closed, making it ideal for storing 
+     temporary data that only needs to exist during the user's current session, such as form input data or transient UI states.
+Usage:
+  Similar to localStorage, data is stored as key-value pairs in string format, and 
+  can hold up to approximately 5 MB of data per origin (domain).

@@ -1,0 +1,45 @@
+Q5. List and briefly explain some common Browser APIs available to JavaScript developers.
+
+
+
+1. DOM (Document Object Model) API:
+
+* Provides methods and properties to manipulate the structure and content of a web page.
+* Example: document.getElementById(), element.addEventListener().
+* Use case: Updating or modifying HTML elements, handling user events.
+
+2. Fetch API:
+
+* Used for making network requests to retrieve resources, such as data from a server.
+* Example: fetch('https://api.example.com/data').then(response => response.json()).
+* Use case: Fetching data from APIs, handling HTTP requests and responses.
+
+3. Web Storage API:
+
+* Provides mechanisms for storing data locally in the browser: LocalStorage (persistent) and SessionStorage (temporary).
+* Example: localStorage.setItem('key', 'value'), sessionStorage.getItem('key').
+* Use case: Storing user preferences, session data, and state management.
+
+4. Geolocation API:
+
+* Provides access to the geographical location of the user's device.
+* Example: navigator.geolocation.getCurrentPosition(successCallback, errorCallback).
+* Use case: Building location-based services, such as maps or tracking applications.
+
+5. Canvas API:
+
+* Allows drawing and creating 2D graphics and animations directly in the browser.
+* Example: const ctx = canvas.getContext('2d'); ctx.fillRect(10, 10, 100, 100);.
+* Use case: Developing games, data visualizations, and interactive graphics.
+
+6. WebSocket API:
+
+* Enables real-time communication between the client and server through a persistent connection.
+* Example: const socket = new WebSocket('wss://example.com/socket');.
+* Use case: Building real-time applications like chat apps or live updates.
+
+7. Notification API:
+
+* Allows web applications to send notifications to users, even when the page is not in focus.
+* Example: new Notification('Hello, world!') (after obtaining permission).
+* Use case: Alerting users to new messages, reminders.
